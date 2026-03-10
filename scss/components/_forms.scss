@@ -1,0 +1,58 @@
+// ============================================
+// FORMULARIO DE CONTACTO
+// ============================================
+
+.form-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.form-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+
+    label {
+        font-size: 0.85rem;
+        font-weight: 400;
+        color: $color-dark;
+    }
+
+    input,
+    textarea {
+        font-family: $font-main;
+        font-size: 0.95rem;
+        font-weight: 300;
+        color: $color-text;
+        background-color: $color-white;
+        border: 1px solid $color-warm;
+        border-radius: $border-radius-sm;
+        padding: 0.75rem $spacing-sm;
+        outline: none;
+        transition: border-color $transition-fast;
+
+        &:focus {
+            border-color: $color-accent;
+        }
+
+        &::placeholder {
+            color: lighten($color-muted, 20%);
+        }
+    }
+
+    textarea {
+        min-height: 140px;
+        resize: vertical;
+    }
+}
+
+.form-fila {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-sm;
+
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+}

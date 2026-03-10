@@ -1,0 +1,82 @@
+// ============================================
+// MIXINS
+// ============================================
+
+// Media queries
+@mixin mobile {
+    @media (max-width: #{$bp-mobile}) { @content; }
+}
+@mixin tablet {
+    @media (max-width: #{$bp-tablet}) { @content; }
+}
+@mixin desktop {
+    @media (min-width: #{$bp-desktop}) { @content; }
+}
+
+// Flex helpers
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+// Botón base
+@mixin btn-base($bg, $color, $border: transparent) {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background-color: $bg;
+    color: $color;
+    border: 1.5px solid $border;
+    border-radius: $border-radius-pill;
+    font-size: 0.9rem;
+    font-style: italic;
+    font-weight: 300;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color $transition-base, color $transition-base,
+                border-color $transition-base, transform $transition-fast;
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+}
+
+// Card base
+@mixin card-base {
+    background-color: $color-white;
+    border: 1px solid $color-warm;
+    border-radius: $border-radius-md;
+    overflow: hidden;
+    transition: transform $transition-base, box-shadow $transition-base;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: $shadow-card;
+    }
+}
+
+// Imagen cover
+@mixin img-cover($height) {
+    width: 100%;
+    height: $height;
+    object-fit: cover;
+}
+
+// Sección padding
+@mixin section-pad($v: $spacing-xl, $h: 5%) {
+    padding: $v $h;
+}
+
+// Grid dos columnas
+@mixin two-col($gap: 4rem) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $gap;
+    align-items: center;
+}

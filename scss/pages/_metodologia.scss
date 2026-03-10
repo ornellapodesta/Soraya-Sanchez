@@ -1,0 +1,43 @@
+// ============================================
+// METODOLOGÍA
+// ============================================
+
+.metodologia-intro {
+    padding: $spacing-xl 5% $spacing-lg;
+    max-width: 720px;
+}
+
+.herramientas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $spacing-md;
+    padding: $spacing-md 5% $spacing-xl;
+
+    @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+}
+
+.proceso-seccion {
+    background-color: $color-light;
+    @include section-pad;
+    @include two-col;
+
+    img {
+        @include img-cover(400px);
+        border-radius: $border-radius-md;
+    }
+
+    @include tablet {
+        grid-template-columns: 1fr;
+        gap: $spacing-md;
+
+        img {
+            height: 260px;
+        }
+    }
+}

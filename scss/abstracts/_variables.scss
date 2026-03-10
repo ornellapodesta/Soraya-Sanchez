@@ -1,0 +1,44 @@
+// ============================================
+// VARIABLES
+// ============================================
+
+// Colores
+$color-bg:      #fef8f0;
+$color-dark:    #5d5e54;
+$color-text:    #3a3a38;
+$color-muted:   #7a7a70;
+$color-accent:  #c9a87c;
+$color-warm:    #e8ddd0;
+$color-light:   #f5ede2;
+$color-cream:   #fef8f0;
+$color-white:   #ffffff;
+
+// Tipografía
+$font-main:     'Lato', sans-serif;
+$font-size-base: 1rem;
+
+// Espaciado
+$spacing-xs:    0.5rem;
+$spacing-sm:    1rem;
+$spacing-md:    2rem;
+$spacing-lg:    3rem;
+$spacing-xl:    5rem;
+
+// Bordes
+$border-radius-sm:  8px;
+$border-radius-md:  12px;
+$border-radius-pill: 50px;
+
+// Transiciones
+$transition-fast:   0.2s ease;
+$transition-base:   0.25s ease;
+$transition-slow:   0.4s ease;
+
+// Breakpoints
+$bp-mobile:  768px;
+$bp-tablet:  900px;
+$bp-desktop: 1200px;
+
+// Sombras
+$shadow-card: 0 12px 32px rgba($color-dark, 0.12);
+$shadow-soft: 0 4px 16px rgba($color-dark, 0.08);

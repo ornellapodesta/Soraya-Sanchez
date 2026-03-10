@@ -1,0 +1,31 @@
+// ============================================
+// MAIN.SCSS — Punto de entrada
+// ============================================
+
+// 1. Abstracts (sin output CSS)
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins'    as *;
+@use 'abstracts/extends';
+
+// 2. Base
+@use 'base/reset';
+@use 'base/typography';
+@use 'base/animations';
+
+// 3. Layout
+@use 'layout/header';
+@use 'layout/footer';
+@use 'layout/grid';
+
+// 4. Components
+@use 'components/buttons';
+@use 'components/cards';
+@use 'components/forms';
+@use 'components/page-hero';
+
+// 5. Pages
+@use 'pages/home';
+@use 'pages/acompanamiento';
+@use 'pages/metodologia';
+@use 'pages/sobremi';
+@use 'pages/contacto';

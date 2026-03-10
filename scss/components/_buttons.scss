@@ -1,0 +1,34 @@
+// ============================================
+// BOTONES
+// ============================================
+
+.hero-cta {
+    @include btn-base(transparent, $color-dark, $color-dark);
+
+    &:hover {
+        background-color: $color-dark;
+        color: $color-warm;
+        border-color: $color-dark;
+    }
+}
+
+.btn-primario {
+    @include btn-base($color-dark, $color-warm);
+    border-color: $color-dark;
+    padding: 0.85rem 2.2rem;
+
+    &:hover {
+        background-color: $color-accent;
+        border-color: $color-accent;
+    }
+}
+
+.btn-enviar {
+    @include btn-base($color-dark, $color-warm);
+    border: none;
+    padding: 0.85rem 2.5rem;
+
+    &:hover {
+        background-color: $color-accent;
+    }
+}

@@ -1,0 +1,42 @@
+// ============================================
+// CONTACTO
+// ============================================
+
+.contacto-wrap {
+    @include section-pad;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-xl;
+    align-items: start;
+
+    @include tablet {
+        grid-template-columns: 1fr;
+        gap: $spacing-md;
+    }
+}
+
+.contacto-info {
+    h1 { margin-bottom: $spacing-sm; }
+    p  { margin-bottom: $spacing-md; }
+}
+
+.contacto-datos {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+}
+
+.contacto-dato {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    color: $color-muted;
+
+    img {
+        width: 1.6rem;
+        height: 1.6rem;
+        object-fit: contain;
+        flex-shrink: 0;
+    }
+}

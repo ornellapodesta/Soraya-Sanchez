@@ -1,0 +1,53 @@
+// ============================================
+// SOBRE MÍ
+// ============================================
+
+.sobremi-hero {
+    background-color: $color-cream;
+    @include section-pad;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-xl;
+    align-items: center;
+
+    img {
+        @include img-cover(520px);
+        border-radius: $border-radius-md;
+    }
+
+    @include tablet {
+        grid-template-columns: 1fr;
+        gap: $spacing-md;
+
+        img { height: 300px; }
+    }
+}
+
+.sobremi-texto {
+    h1 { margin-bottom: 0.5rem; }
+
+    .subtitulo {
+        font-size: $font-size-base;
+        font-style: italic;
+        color: $color-accent;
+        margin-bottom: $spacing-md;
+        font-weight: 300;
+    }
+}
+
+.formacion-seccion {
+    background-color: $color-white;
+    @include section-pad;
+
+    h2 { margin-bottom: 2.5rem; }
+}
+
+.formacion-lista {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+
+    @include tablet {
+        grid-template-columns: 1fr;
+    }
+}

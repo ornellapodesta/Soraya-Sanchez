@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre mí — Soraya Sánchez</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="../index.html">
+                <img class="logo" src="../images/logo-09.png" alt="Soraya Sánchez">
+            </a>
+            <input type="checkbox" id="menu-toggle" class="menu-check">
+            <label for="menu-toggle" class="menu-icon" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </label>
+            <ul class="nav-links">
+                <li><a href="acompanamiento.html">Acompañamiento</a></li>
+                <li><a href="metodologia.html">Metodología</a></li>
+                <li><a href="sobremi.html">Sobre mí</a></li>
+                <li><a href="contacto.html" class="btn-contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- SOBRE MÍ HERO -->
+        <section class="sobremi-hero reveal">
+            <img src="../images/sobremi.png" alt="Soraya Sánchez">
+            <div class="sobremi-texto">
+                <h1>Soraya Sánchez</h1>
+                <p class="subtitulo">Psicóloga · Coach · Terapeuta Gestalt</p>
+                <p>Soy psicóloga con formación integradora en terapia Gestalt, coaching e hipnosis terapéutica. Llevo años acompañando a personas en procesos de cambio, autoconocimiento y crecimiento personal.</p>
+                <p>Creo profundamente en la capacidad de las personas para transformarse cuando se sienten acompañadas desde la presencia, la escucha y el respeto. Mi papel no es decirte qué hacer, sino caminar contigo mientras encuentras tus propias respuestas.</p>
+                <p>Me interesa el encuentro genuino, la honestidad terapéutica y el cuidado del vínculo como base de cualquier proceso de cambio real.</p>
+            </div>
+        </section>
+
+        <!-- FORMACIÓN — Bootstrap grid -->
+        <section class="formacion-seccion">
+            <div class="container">
+                <h2 class="reveal">Formación y trayectoria</h2>
+                <div class="row g-3">
+                    <div class="col-12 col-md-6 reveal reveal-delay-1">
+                        <div class="formacion-item">
+                            <h3>Licenciatura en Psicología</h3>
+                            <p>Formación universitaria en ciencias de la salud mental con enfoque humanista e integrativo.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 reveal reveal-delay-2">
+                        <div class="formacion-item">
+                            <h3>Terapia Gestalt</h3>
+                            <p>Formación especializada en terapia Gestalt, enfoque vivencial y trabajo con la experiencia presente.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 reveal reveal-delay-3">
+                        <div class="formacion-item">
+                            <h3>Coaching Personal</h3>
+                            <p>Certificación en coaching orientado a objetivos, recursos internos y desarrollo personal.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 reveal reveal-delay-4">
+                        <div class="formacion-item">
+                            <h3>Hipnosis Terapéutica</h3>
+                            <p>Formación en hipnosis clínica aplicada al trabajo con el inconsciente y la integración emocional.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VALORES -->
+        <section class="proceso-seccion reveal">
+            <img src="../images/Sory-first-steps-19.png" alt="Mi enfoque">
+            <div class="bloque-texto">
+                <h3>Mi enfoque</h3>
+                <h2>Presencia, escucha y respeto</h2>
+                <p>La relación terapéutica es para mí el pilar de cualquier proceso de cambio. Trabajo desde un lugar de presencia genuina, sin juicios y con pleno respeto hacia tu proceso y tus tiempos.</p>
+                <p>Cada persona que llega a consulta trae consigo su propia historia, sus propios recursos y sus propias preguntas. Mi trabajo es ayudarte a encontrar tus respuestas.</p>
+                <a href="contacto.html" class="btn-primario">Ponernos en contacto</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <p class="footer-copy">© 2026 Soraya Sánchez · Psicóloga</p>
+            <div class="footer-icons">
+                <a href="mailto:sorayasanchezterapia@gmail.com" aria-label="Email">
+                    <img class="icon-footer" src="../images/mail.png" alt="Email">
+                </a>
+                <a href="#" aria-label="Instagram">
+                    <img class="icon-footer" src="../images/instagram.png" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const revealEls = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+            });
+        }, { threshold: 0.12 });
+        revealEls.forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

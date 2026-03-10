@@ -1,0 +1,50 @@
+// ============================================
+// ANIMACIONES
+// ============================================
+
+// Fade in desde abajo 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(28px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Fade in suave
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+// Slide desde la izquierda
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+// Delays escalonados para grupos de elementos
+@each $i in 1, 2, 3, 4, 5, 6 {
+    .reveal-delay-#{$i} {
+        transition-delay: #{$i * 0.1}s;
+    }
+}
+
+// Hero: animación de entrada automática
+.hero-texto {
+    animation: slideInLeft 0.8s ease both;
+}
+
+.hero-imagen-wrap {
+    animation: fadeIn 1s ease 0.3s both;
+}

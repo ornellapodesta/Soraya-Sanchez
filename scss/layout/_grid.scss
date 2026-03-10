@@ -1,0 +1,43 @@
+// ============================================
+// LAYOUT / GRID 
+// ============================================
+
+.container {
+    width: 90%;
+    max-width: $bp-desktop;
+    margin: 0 auto;
+}
+
+// Dos columnas 
+.bloque-dos-col {
+    @include two-col;
+    @include section-pad;
+
+    &.inverso {
+        direction: rtl;
+
+        & > * {
+            direction: ltr;
+        }
+    }
+
+    @include tablet {
+        grid-template-columns: 1fr;
+        gap: $spacing-md;
+
+        &.inverso {
+            direction: ltr;
+        }
+    }
+}
+
+.bloque-imagen {
+    img {
+        @include img-cover(400px);
+        border-radius: $border-radius-md;
+    }
+}
+
+.bloque-texto {
+    padding: $spacing-sm 0;
+}

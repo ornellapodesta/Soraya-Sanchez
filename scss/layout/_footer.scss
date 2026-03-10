@@ -1,0 +1,44 @@
+// ============================================
+// FOOTER
+// ============================================
+
+footer {
+    background-color: $color-bg;
+    color: $color-text;
+    padding: 2.5rem 5%;
+}
+
+.footer-inner {
+    @include flex-between;
+    flex-wrap: wrap;
+    gap: $spacing-sm;
+}
+
+.footer-copy {
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: $color-dark;
+}
+
+.footer-icons {
+    display: flex;
+    gap: $spacing-sm;
+    align-items: center;
+
+    a {
+        display: flex;
+        align-items: center;
+        opacity: 0.75;
+        transition: opacity $transition-fast;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.icon-footer {
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
+}

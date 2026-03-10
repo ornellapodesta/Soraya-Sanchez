@@ -1,0 +1,51 @@
+// ============================================
+// TYPOGRAPHY
+// ============================================
+
+:root {
+    --color-bg:     #{$color-bg};
+    --color-dark:   #{$color-dark};
+    --color-text:   #{$color-text};
+    --color-muted:  #{$color-muted};
+    --color-accent: #{$color-accent};
+    --color-warm:   #{$color-warm};
+    --color-light:  #{$color-light};
+    --color-cream:  #{$color-cream};
+    --font-main:    #{$font-main};
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: bold;
+    font-style: italic;
+    color: $color-dark;
+    line-height: 1.2;
+    margin-bottom: $spacing-sm;
+}
+
+h2 {
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+    font-weight: 300;
+    color: $color-dark;
+    margin-bottom: 0.75rem;
+    line-height: 1.35;
+}
+
+h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: $color-muted;
+    margin-bottom: $spacing-xs;
+}
+
+p {
+    font-size: $font-size-base;
+    font-weight: 300;
+    color: $color-muted;
+    margin-bottom: $spacing-sm;
+    line-height: 1.75;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

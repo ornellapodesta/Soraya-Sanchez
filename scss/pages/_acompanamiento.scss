@@ -1,0 +1,60 @@
+// ============================================
+// ACOMPAÑAMIENTO
+// ============================================
+
+.servicios-intro {
+    padding: 4rem 5% 2rem;
+    max-width: 700px;
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    padding: 2rem 5% $spacing-xl;
+
+    @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+}
+
+.bloque-destacado {
+    background-color: $color-light;
+    @include section-pad;
+    @include two-col;
+
+    img {
+        @include img-cover(420px);
+        border-radius: $border-radius-md;
+    }
+
+    @include tablet {
+        grid-template-columns: 1fr;
+        gap: $spacing-md;
+
+        img {
+            height: 260px;
+        }
+    }
+}
+
+.cta-final {
+    background-color: $color-dark;
+    @include section-pad;
+    text-align: center;
+
+    h2 {
+        color: $color-warm;
+        margin-bottom: $spacing-sm;
+    }
+
+    p {
+        color: rgba($color-warm, 0.7);
+        max-width: 560px;
+        margin: 0 auto $spacing-md;
+    }
+}

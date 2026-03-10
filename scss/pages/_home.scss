@@ -1,0 +1,239 @@
+// ============================================
+// HOME — index.html
+// ============================================
+
+// HERO
+.hero {
+    background-color: $color-cream;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: $spacing-xl 5%;
+    gap: 4rem;
+    overflow: hidden;
+
+    &-texto {
+        flex: 1;
+        max-width: 560px;
+
+        h1 { margin-bottom: 1.25rem; }
+
+        h2 {
+            font-size: 1.15rem;
+            font-weight: 300;
+            color: $color-accent;
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            line-height: 1.8;
+            margin-bottom: $spacing-md;
+        }
+    }
+
+    &-imagen-wrap {
+        flex: 1;
+        @include flex-center;
+    }
+
+    &-imagen {
+        width: 100%;
+        max-height: 560px;
+        object-fit: cover;
+        border-radius: 16px;
+    }
+
+    @include mobile {
+        flex-direction: column;
+        min-height: auto;
+        padding: $spacing-lg 5%;
+    }
+}
+
+.hero-imagen-wrap {
+    @include mobile {
+        display: none;
+    }
+}
+
+// QUÉ PUEDES ENCONTRAR
+.seccion-lista {
+    background-color: $color-dark;
+    @include section-pad;
+    text-align: center;
+
+    h2 {
+        color: $color-warm;
+        margin-bottom: 2.5rem;
+    }
+}
+
+.lista-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $spacing-sm;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.lista-item {
+    background-color: rgba($color-warm, 0.1);
+    border: 1px solid rgba($color-warm, 0.25);
+    color: $color-warm;
+    padding: 0.6rem 1.4rem;
+    border-radius: $border-radius-pill;
+    font-size: 0.9rem;
+    font-weight: 300;
+    font-style: italic;
+    transition: background-color $transition-base, border-color $transition-base;
+
+    &:hover {
+        background-color: rgba($color-warm, 0.2);
+        border-color: rgba($color-warm, 0.45);
+    }
+}
+
+// VIDEOS
+.seccion-videos {
+    @include section-pad;
+    background-color: $color-light;
+
+    h2 {
+        text-align: center;
+        margin-bottom: $spacing-lg;
+    }
+}
+
+.videos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-md;
+
+    @include tablet {
+        grid-template-columns: 1fr;
+    }
+}
+
+.video-wrap {
+    border-radius: $border-radius-md;
+    overflow: hidden;
+    background: $color-dark;
+
+    p {
+        color: $color-warm;
+        font-style: italic;
+        font-size: 0.85rem;
+        padding: 0.75rem $spacing-sm;
+        margin: 0;
+    }
+
+    iframe {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        border: 0;
+    }
+}
+
+// MI MIRADA
+.seccion-mirada {
+    @include section-pad;
+    background-color: $color-cream;
+    @include two-col;
+
+    @include tablet {
+        grid-template-columns: 1fr;
+        gap: $spacing-md;
+    }
+}
+
+.mirada-cita {
+    border-left: 3px solid $color-accent;
+    padding-left: $spacing-md;
+
+    h3 {
+        font-size: 1.3rem;
+        color: $color-dark;
+        margin-bottom: $spacing-sm;
+    }
+}
+
+.mirada-cta {
+    text-align: center;
+
+    h2 {
+        margin-bottom: $spacing-md;
+    }
+}
+
+// TESTIMONIOS (Bootstrap carousel + estilos propios)
+.seccion-testimonios {
+    background-color: $color-light;
+    @include section-pad;
+    text-align: center;
+
+    h2 {
+        margin-bottom: 0.5rem;
+    }
+
+    .subtitulo-seccion {
+        font-size: 0.95rem;
+        color: $color-muted;
+        font-style: italic;
+        margin-bottom: $spacing-lg;
+    }
+
+    // Overrides Bootstrap carousel
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        filter: invert(0.5) sepia(1) saturate(2) hue-rotate(5deg);
+    }
+
+    .carousel-indicators {
+        bottom: -2.5rem;
+
+        [data-bs-target] {
+            background-color: $color-accent;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            border: none;
+            opacity: 0.4;
+
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+
+    .carousel-inner {
+        padding-bottom: 3rem;
+    }
+}
+
+// GALERÍA (Bootstrap grid)
+.seccion-galeria {
+    @include section-pad;
+    background-color: $color-cream;
+
+    h2 {
+        text-align: center;
+        margin-bottom: $spacing-lg;
+    }
+}
+
+.galeria-item {
+    overflow: hidden;
+    border-radius: $border-radius-md;
+
+    img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        transition: transform $transition-slow;
+    }
+
+    &:hover img {
+        transform: scale(1.04);
+    }
+}
