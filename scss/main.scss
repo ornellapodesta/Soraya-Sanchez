@@ -2,7 +2,7 @@
 // MAIN.SCSS — Punto de entrada
 // ============================================
 
-// 1. Abstracts (sin output CSS)
+// 1. Abstracts 
 @use 'abstracts/variables' as *;
 @use 'abstracts/mixins'    as *;
 @use 'abstracts/extends';
